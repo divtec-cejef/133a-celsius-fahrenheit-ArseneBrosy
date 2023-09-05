@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<h1>Convertisseur Celsius > Fahrenheit</h1>
+<div id="app">
+    <form method="get" action="https://kode.ch/getpost/">
+        <ul class="form">
+            <li></li>
+            <li>
+                <label for="celsius">Saisir une température °C</label>
+                <input type="text" name="celsius" id="celsius" v-model="celsius">
+            </li>
+            <li>
+                <button type="submit">Convertir en °F</button>
+                <button type="reset">Réinitialiser</button>
+            </li>
+        </ul>
+    </form>
+
+    <div class="resultats">
+        <p>Résultat : <strong>{{ fahrenheit }}</strong></p>
+
+        <h2>Historique</h2>
+        <ul id="historique">
+
+        </ul>
+    </div>
+</div>
+<!-- JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
