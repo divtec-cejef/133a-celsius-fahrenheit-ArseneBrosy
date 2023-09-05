@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Convertisseur Celsius > Fahrenheit</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">
+</head>
+<body>
+
+<h1>Convertisseur Celsius > Fahrenheit</h1>
+
+<form method="get" action="https://kode.ch/getpost/">
+    <ul class="form">
+        <li>
+            <label for="celsius">Saisir une température °C</label>
+            <input type="text" name="celsius" id="celsius">
+        </li>
+        <li>
+            <button type="submit">Convertir en °F</button>
+            <button type="reset">Réinitialiser</button>
+        </li>
+    </ul>
+</form>
+
+<div class="resultats">
+    <p>Résultat : <strong id="fahrenheit"></strong></p>
+
+    <h2>Historique</h2>
+    <ul id="historique">
+
+    </ul>
+</div>
+
+<!-- JavaScript -->
+<script src="js/main.js"></script>
+</body>
+</html>
