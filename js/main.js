@@ -14,10 +14,19 @@ if (isNaN(celsius)) {
   alert(`${celsius}°C = ${fahrenheit}°F`);
 }*/
 
+// ajouter la fonction convertir au boutton
 document.querySelector("#button-convert").addEventListener("click", convert);
+
+// ajouter la fonction reinitialiser au boutton
+document.querySelector("#button-reinit").addEventListener("click", reinit);
+
+// ajouter les 2 fonctions au touches du clavier
 document.addEventListener("keydown", (e) => {
   if (e.code === "Enter") {
     convert();
+  }
+  if (e.code === "Escape") {
+    reinit();
   }
 })
 
@@ -33,8 +42,22 @@ function convert() {
 
   // convertir en fahrenheit et l'afficher
   let fahrenheit = celsius * 9 / 5 + 32;
-  document.querySelector("#result").innerHTML = "${fahrenheit}°F";
+  document.querySelector("#result").innerHTML = `${fahrenheit}°F`;
 
   // inscrire le résultat dans l'historique
-  document.querySelector("#history-list").innerHTML += "<li>${celsius}°C = ${fahrenheit}°F</li>";
+  document.querySelector("#history-list").innerHTML += `<li>${celsius}°C = ${fahrenheit}°F</li>`;
+
+  // vider l'input
+  document.querySelector("#input-celsius").value = "";
+}
+
+function reinit() {
+  // vider l'input
+  document.querySelector("#input-celsius").value = "";
+
+  // vider le résultat
+  document.querySelector("#result").innerHTML = "";
+
+  // vider l'historique
+  document.querySelector("#history-list").innerHTML = "";
 }
