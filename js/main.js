@@ -6,6 +6,10 @@
  */
 'use strict'; // Demande un interprétation stricte du code
 
-let a = 'Bonjour';
-
-console.log(a);
+let celsius = parseInt(prompt("Température en celsius"));
+if (isNaN(celsius)) {
+  alert("Entrez un nombre");
+} else {
+  let fahrenheit = celsius * 9 / 5 + 32;
+  alert(`${celsius}°C = ${fahrenheit}°F`);
+}
